@@ -5,9 +5,9 @@
 ## Demo
 
 # 使用技術
-- React hook
--  UI : Antd Design
-clㄏㄠ
+- [React hook](https://zh-hant.reactjs.org/)
+-  UI : [Antd Design](https://ant.design/)
+
 # 目標建立功能
 - 登入、登出 功能。
 - 使用者新增分類，點擊分類切換 ToDoList
