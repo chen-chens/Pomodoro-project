@@ -4,6 +4,7 @@ import {
 } from 'antd';
 import PropTypes from 'prop-types';
 import { useHistory } from 'react-router-dom';
+// import UserContext from '../context/userContext';
 
 const {
   Header, Content, Sider,
@@ -11,6 +12,15 @@ const {
 
 function MainLayout({ content, menu }) {
   const history = useHistory();
+  // const { setUserState } = useContext(UserContext);
+
+  // const handleLogout = () => {
+  //   setUserState({
+  //     hasLogin: false,
+  //     userInfo: { name: 'Guest' },
+  //   });
+  // };
+
   return (
     <Layout>
       <Header className="header">

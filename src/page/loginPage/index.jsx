@@ -2,9 +2,11 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 import { Form, Button, Input } from 'antd';
 import AlertNotification from '../../common/alertNotification';
+// import UserContext from '../../context/userContext';
 
 export default function LoginPage() {
   const history = useHistory();
+  // const { setUserState } = useContext(UserContext);
 
   const rules = [
     {
@@ -15,6 +17,10 @@ export default function LoginPage() {
 
   const onFinish = (values) => {
     console.log('Success:', values);
+    // setUserState({
+    //   hasLogin: true,
+    //   userInfo: { name: 'Joanna' },
+    // });
     history.push('/toDoPage');
   };
 
@@ -25,6 +31,7 @@ export default function LoginPage() {
       message: '帳號或密碼輸入錯誤',
     });
   };
+
   return (
     <Form
       name="basic"

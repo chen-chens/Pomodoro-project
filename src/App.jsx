@@ -7,7 +7,7 @@ import ToDoPage from './page/toDoPage';
 
 const routes = [
   {
-    // exact: true,
+    exact: true,
     path: '/',
     component: <LoginPage />,
   },
@@ -22,20 +22,28 @@ const routes = [
 ];
 
 function App() {
+  // const [userState, setUserState] = useState({
+  //   hasLogin: false,
+  //   userInfo: { name: 'Guest' },
+  // });
+  console.log('App!');
+
   return (
-    <Router>
-      <Switch>
-        {routes.map((item) => (
-          <Route
-            key={item.path}
-            // exact={item.exact}
-            path={item.path}
-          >
-            {item.component}
-          </Route>
-        ))}
-      </Switch>
-    </Router>
+    <>
+      <Router>
+        <Switch>
+          {routes.map((item) => (
+            <Route
+              key={item.path}
+              exact={item.exact}
+              path={item.path}
+            >
+              {item.component}
+            </Route>
+          ))}
+        </Switch>
+      </Router>
+    </>
   );
 }
 
